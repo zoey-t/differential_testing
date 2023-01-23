@@ -4,11 +4,10 @@ from math import sqrt
 
 # test sqrt(n)
 def main(args):
-    n = args.n
-    
+    n = args.n  
     res = sqrt(n)
-    # print("sqrt of {}: {}".format(n, res))
-    # print(int(res))
+    
+    # encode our result
     enc = encode_single('uint256', int(res))
     print("0x" + enc.hex())
 
