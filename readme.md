@@ -1,6 +1,6 @@
 # differential testing
 
-`forge test --ffi -vvv `
+`forge test --ffi`
 
 - test `sqrt()` in openzeppelin math library
 
