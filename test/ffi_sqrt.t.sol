@@ -16,9 +16,7 @@ contract ffi_sqrt is Test {
     function test_sqrt(uint256 n) public {
         uint256 oz_res = Math.sqrt(n);
         uint256 python_res = sqrt_python(n);
-        assertApproxEqRel(oz_res, python_res, 1e17); // 1e17/1e18 = 0.1 => 10%
-            // assertApproxEqAbs(oz_res, python_res, 5, "exceed error tolerance: 5");
-            // assertEq(oz_res, python_res);
+        assertApproxEqRel(oz_res, python_res, 1e17); // 1e17/1e18 => 10%
     }
 
     function sqrt_python(uint256 n) public returns (uint256 sqrt_res) {
